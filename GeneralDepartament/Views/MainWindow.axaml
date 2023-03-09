@@ -9,11 +9,29 @@
         Title="GeneralDepartament">
 
     <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
-    </Design.DataContext>
+    </Design.DataContext>   
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid RowDefinitions="10*,10*,75*,5*" ShowGridLines="True" Margin="6">
+        <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="{Binding User.Token}"/>
+        </Viewbox>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
+            <Label VerticalAlignment="Center">Подразделение:</Label>
+            <ComboBox Width="200"/>            
+            <Label VerticalAlignment="Center">Статус:</Label>
+            <ComboBox Width="150"/>
+        </StackPanel>
+        <DataGrid Grid.Row="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Срок действия заявки"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цель посещения"></DataGridTextColumn>
+                <DataGridTextColumn Header="Подразделение"></DataGridTextColumn>
+                <DataGridTextColumn Header="ФИО"></DataGridTextColumn>
+                <DataGridTextColumn Header="Статус" Binding="{Binding}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+    </Grid>
 
 </Window>

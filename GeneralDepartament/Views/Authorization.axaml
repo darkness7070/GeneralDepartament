@@ -1,0 +1,12 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Width="400" Height="200" MaxWidth="400" MaxHeight="200"
+        x:Class="GeneralDepartament.Views.Authorization"
+        Title="Авторизация">
+        <Grid VerticalAlignment="Center" Margin="16" RowDefinitions="Auto,Auto" ShowGridLines="False">
+                <TextBox Grid.Row="0" Margin="6" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Center" Watermark="Введите код" Name="boxCode"/>
+                <Button Grid.Row="1"  Margin="6" HorizontalAlignment="Center" Content="Войти" Click="Login_Click"/>
+        </Grid>
+</Window>

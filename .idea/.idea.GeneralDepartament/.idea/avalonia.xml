@@ -3,6 +3,8 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="GeneralDepartament/App.axaml" value="GeneralDepartament/GeneralDepartament.csproj" />
+        <entry key="GeneralDepartament/Views/Authorization.axaml" value="GeneralDepartament/GeneralDepartament.csproj" />
         <entry key="GeneralDepartament/Views/MainWindow.axaml" value="GeneralDepartament/GeneralDepartament.csproj" />
       </map>
     </option>
